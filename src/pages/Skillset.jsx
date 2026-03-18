@@ -10,7 +10,7 @@ export default function Skillset() {
   title="Skillset and Expertise Development"
   description="Explore how skillset builds authority, trust, value creation, and market confidence in business."
   keywords="skillset, expertise, authority, business skills, value creation"
-  canonical="https://yourdomain.com/skillset"
+  canonical="https://urmsta.com/skillset"
 />
       <Navbar />
 

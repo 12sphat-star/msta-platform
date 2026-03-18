@@ -1,22 +1,54 @@
 import SEO from "../components/SEO";
+import Schema from "../components/Schema";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Toolset() {
+    const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What does toolset mean in MSTA?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "In MSTA, toolset means the systems, software, automation, websites, AI tools, and infrastructure that help a business operate more efficiently and grow with leverage."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Why is toolset important for business growth?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Toolset is important because growth becomes harder to sustain when everything depends on manual effort. The right systems improve speed, consistency, visibility, and follow-up."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What is included in a strong business toolset?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A strong business toolset can include a smart website, CRM, calendar booking, automation, AI voice and chat, follow-up workflows, and access to capital strategies that support growth."
+        }
+      }
+    ]
+  };
   return (
     <>
-    <SEO
-  title="Toolset Systems AI and Business Infrastructure"
-  description="Discover how websites, automation, AI, CRM systems, and digital infrastructure help businesses grow with leverage."
-  keywords="toolset, AI automation, CRM, websites, digital infrastructure, business systems"
-  canonical="https://yourdomain.com/toolset"
-/>
+      <SEO
+        title="Toolset Systems AI and Business Infrastructure"
+        description="Discover how websites, automation, AI, CRM systems, and digital infrastructure help businesses grow with leverage."
+        keywords="toolset, AI automation, CRM, websites, digital infrastructure, business systems"
+        canonical="https://yourdomain.com/toolset"
+      />
+<Schema data={faqSchema} />
       <Navbar />
 
       <div className="bg-[#0A0F1C] text-white">
         {/* HERO */}
-        <section className="min-h-[70vh] flex items-center justify-center text-center px-6">
+        <section className="min-h-[70vh] flex items-center justify-center text-center px-6 pt-28">
           <div className="max-w-5xl">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -34,6 +66,13 @@ export default function Toolset() {
               websites, automation, client management, AI systems, and capital
               access work together to make growth more efficient, more
               consistent, and more scalable.
+            </p>
+
+            <p className="mt-6 text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              What is toolset in MSTA? Toolset is the systems layer of the MSTA
+              framework. It includes the digital tools, automation, website
+              structure, CRM systems, AI support, and capital access strategies
+              that help a business operate with more leverage and less friction.
             </p>
           </div>
         </section>
@@ -200,6 +239,51 @@ export default function Toolset() {
                 <li>• DSCR and fix-and-flip strategies</li>
                 <li>• Business expansion capital</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-24 px-6 border-t border-gray-800">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
+              Toolset FAQs
+            </h2>
+
+            <div className="space-y-6">
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  What does toolset mean in MSTA?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  In MSTA, toolset means the systems, software, automation,
+                  websites, AI tools, and infrastructure that help a business
+                  operate more efficiently and grow with leverage.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  Why is toolset important for business growth?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  Toolset is important because growth becomes harder to sustain
+                  when everything depends on manual effort. The right systems
+                  improve speed, consistency, visibility, and follow-up.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  What is included in a strong business toolset?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  A strong business toolset can include a smart website, CRM,
+                  calendar booking, automation, AI voice and chat, follow-up
+                  workflows, and access to capital strategies that support
+                  growth.
+                </p>
+              </div>
             </div>
           </div>
         </section>

@@ -42,7 +42,7 @@ export default function Book() {
   title="Schedule a Direct Consultation"
   description="Schedule a direct consultation to discuss business structure, systems, visibility, growth strategy, and next steps."
   keywords="business consultation, strategy call, direct consultation, growth strategy"
-  canonical="https://yourdomain.com/book"
+  canonical="https://urmsta.com/book"
 />
       <Navbar />
 

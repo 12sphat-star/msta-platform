@@ -10,7 +10,7 @@ export default function Mindset() {
   title="Mindset for Business Growth"
   description="Learn how mindset shapes discipline, clarity, direction, and decision-making for stronger business and personal growth."
   keywords="mindset, business mindset, discipline, clarity, leadership mindset"
-  canonical="https://yourdomain.com/mindset"
+  canonical="https://urmsta.com/mindset"
 />
       <Navbar />
 

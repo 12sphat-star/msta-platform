@@ -1,4 +1,5 @@
 import SEO from "../components/SEO";
+import Schema from "../components/Schema";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
@@ -31,6 +32,37 @@ export default function Assessment() {
       "I have insurance, trust, or legal structures that support my family or business",
       "I understand that a trust is one part of a complete estate plan, not the full plan by itself",
       "I am building assets that can serve me now and continue working beyond me",
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What does the MSTA Assessment measure?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The MSTA Assessment measures four areas: mindset, skillset, toolset, and assets. It is designed to help you see where your current structure is strong and where it may need attention.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Who should take the MSTA Assessment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The assessment is useful for business owners, entrepreneurs, professionals, and growth-minded individuals who want more clarity around structure, execution, systems, and protection.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What happens after I complete the assessment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "After you complete the assessment, you receive a score and a view of the areas that may need the most attention. From there, you can book a strategy call or review the framework in more detail.",
+        },
+      },
     ],
   };
 
@@ -71,17 +103,11 @@ export default function Assessment() {
       (cat) => scores[cat] === minScore
     );
 
-    // Keep old workflow values alive behind the scenes
-    // Priority logic:
-    // toolset low + digital visibility questions weak -> digital or AI
-    // assets low -> capital
-    // mindset/skillset low -> operations
     const toolsetDigitalSignals =
       (responses["toolset-0"] ? 1 : 0) +
       (responses["toolset-1"] ? 1 : 0);
 
-    const toolsetAISignals =
-      (responses["toolset-2"] ? 1 : 0);
+    const toolsetAISignals = responses["toolset-2"] ? 1 : 0;
 
     let workflowWeakPillar = "operations";
 
@@ -95,7 +121,10 @@ export default function Assessment() {
       } else {
         workflowWeakPillar = "operations";
       }
-    } else if (weakestCategories.includes("mindset") || weakestCategories.includes("skillset")) {
+    } else if (
+      weakestCategories.includes("mindset") ||
+      weakestCategories.includes("skillset")
+    ) {
       workflowWeakPillar = "operations";
     }
 
@@ -115,12 +144,15 @@ export default function Assessment() {
 
   return (
     <>
-    <SEO
-  title="MSTA Assessment"
-  description="Take the MSTA Assessment to identify gaps in mindset, skillset, toolset, and assets and uncover your next best move."
-  keywords="MSTA assessment, business assessment, growth assessment, infrastructure assessment"
-  canonical="https://yourdomain.com/assessment"
-/>
+      <SEO
+        title="MSTA Assessment"
+        description="Take the MSTA Assessment to identify gaps in mindset, skillset, toolset, and assets and uncover your next best move."
+        keywords="MSTA assessment, business assessment, growth assessment, infrastructure assessment"
+        canonical="https://urmsta.com/assessment"
+      />
+
+      <Schema data={faqSchema} />
+
       <Navbar />
 
       <div className="bg-[#05070C] text-white min-h-screen pt-28">
@@ -130,10 +162,16 @@ export default function Assessment() {
               MSTA Assessment
             </h1>
 
-            <p className="text-lg text-gray-400 leading-relaxed">
+            <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
               Select every statement that is consistently true for you or your
               business. Unchecked items reveal where structure may need to be
               strengthened.
+            </p>
+
+            <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              What is the MSTA Assessment? It is a simple self-assessment that
+              helps identify gaps in mindset, skillset, toolset, and assets so
+              you can see where stronger structure may be needed first.
             </p>
           </div>
         </section>
@@ -215,6 +253,50 @@ export default function Assessment() {
                 </div>
               </div>
             )}
+          </div>
+        </section>
+
+        <section className="px-6 py-16 border-t border-gray-800">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
+              Assessment FAQs
+            </h2>
+
+            <div className="space-y-6">
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  What does the MSTA Assessment measure?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  The MSTA Assessment measures four areas: mindset, skillset,
+                  toolset, and assets. It is designed to help you see where your
+                  current structure is strong and where it may need attention.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  Who should take the MSTA Assessment?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  The assessment is useful for business owners, entrepreneurs,
+                  professionals, and growth-minded individuals who want more
+                  clarity around structure, execution, systems, and protection.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  What happens after I complete the assessment?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  After you complete the assessment, you receive a score and a
+                  view of the areas that may need the most attention. From
+                  there, you can book a strategy call or review the framework in
+                  more detail.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>

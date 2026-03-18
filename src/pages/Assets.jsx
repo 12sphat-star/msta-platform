@@ -1,4 +1,5 @@
 import SEO from "../components/SEO";
+import Schema from "../components/Schema";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -18,19 +19,53 @@ const trustDocuments = [
 ];
 
 export default function Assets() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What does assets mean in MSTA?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "In MSTA, assets means more than ownership. It includes the protection, insurance, legal structure, and legacy planning systems that help preserve and transfer value over time.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why is health coverage part of asset protection?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Health coverage is part of asset protection because a major medical event can disrupt income, create debt, and weaken a family or business financially. Good coverage helps reduce that risk.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do trusts and insurance work together?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Insurance can provide protection and liquidity, while trusts can provide structure, control, and continuity. Together they can support stronger legacy and estate planning.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
-    <SEO
-  title="Assets Protection Legacy and Wealth Structure"
-  description="Understand how assets, protection planning, trusts, insurance, and legacy structures support long-term stability."
-  keywords="assets, legacy planning, wealth structure, trusts, insurance, protection"
-  canonical="https://yourdomain.com/assets"
-/>
+      <SEO
+        title="Assets Protection Legacy and Wealth Structure"
+        description="Understand how assets, protection planning, trusts, insurance, and legacy structures support long-term stability."
+        keywords="assets, legacy planning, wealth structure, trusts, insurance, protection"
+        canonical="https://urmsta.com/assets"
+      />
+
+      <Schema data={faqSchema} />
+
       <Navbar />
 
       <div className="bg-[#0A0F1C] text-white">
         {/* HERO */}
-        <section className="min-h-[72vh] flex items-center justify-center text-center px-6">
+        <section className="min-h-[72vh] flex items-center justify-center text-center px-6 pt-28">
           <div className="max-w-5xl">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -48,6 +83,13 @@ export default function Assets() {
               grow, and eventually transfer. Real assets are built with strategy
               so they can serve you while you are living and continue working
               after you are gone.
+            </p>
+
+            <p className="mt-6 text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              What are assets in MSTA? Assets are the protection, ownership,
+              legal, insurance, and legacy structures that help preserve value,
+              reduce disruption, and support long-term stability for individuals,
+              families, and businesses.
             </p>
           </div>
         </section>
@@ -128,10 +170,11 @@ export default function Assets() {
             </p>
 
             <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-              For individuals, families, and self-employed business owners,
-             the right health coverage strategy is not one-size-fits-all.
-             ACA may be a fit for some, while others may benefit more from private 
-             or alternative options designed around affordability and and aligned with current needs.
+              For individuals, families, and self-employed business owners, the
+              right health coverage strategy is not one-size-fits-all. ACA may
+              be a fit for some, while others may benefit more from private or
+              alternative options designed around affordability and aligned with
+              current needs.
             </p>
           </div>
         </section>
@@ -187,6 +230,51 @@ export default function Assets() {
               proper design, clear objectives, and guidance that matches the
               client’s real situation.
             </p>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-24 px-6 bg-[#0F1626] border-t border-gray-800">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center">
+              Asset Protection FAQs
+            </h2>
+
+            <div className="space-y-6">
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  What does assets mean in MSTA?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  In MSTA, assets means more than ownership. It includes the
+                  protection, insurance, legal structure, and legacy planning
+                  systems that help preserve and transfer value over time.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  Why is health coverage part of asset protection?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  Health coverage is part of asset protection because a major
+                  medical event can disrupt income, create debt, and weaken a
+                  family or business financially. Good coverage helps reduce
+                  that risk.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-gray-800 bg-[#0A0F1C] p-6">
+                <h3 className="text-xl font-semibold">
+                  Do trusts and insurance work together?
+                </h3>
+                <p className="mt-3 text-gray-400 leading-relaxed">
+                  Yes. Insurance can provide protection and liquidity, while
+                  trusts can provide structure, control, and continuity. Together
+                  they can support stronger legacy and estate planning.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
