@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
@@ -114,6 +115,12 @@ export default function Assessment() {
 
   return (
     <>
+    <SEO
+  title="MSTA Assessment"
+  description="Take the MSTA Assessment to identify gaps in mindset, skillset, toolset, and assets and uncover your next best move."
+  keywords="MSTA assessment, business assessment, growth assessment, infrastructure assessment"
+  canonical="https://yourdomain.com/assessment"
+/>
       <Navbar />
 
       <div className="bg-[#05070C] text-white min-h-screen pt-28">

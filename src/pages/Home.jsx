@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import CredibilityStrip from "../components/CredibilityStrip";
 import MSTASection from "../components/MSTASection";
@@ -7,6 +8,12 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <>
+    <SEO
+  title="Mindset Skillset Toolset Assets Framework"
+  description="MSTA helps business owners build with clarity, grow with leverage, and protect what matters through mindset, skillset, toolset, and assets."
+  keywords="MSTA, mindset, skillset, toolset, assets, business strategy, business growth, business infrastructure"
+  canonical="https://yourdomain.com/"
+/>
       <Navbar />
 
       <section className="relative min-h-screen bg-[#05070C] text-white flex items-center overflow-hidden">

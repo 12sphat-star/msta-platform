@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -5,6 +6,12 @@ import { motion } from "framer-motion";
 export default function Skillset() {
   return (
     <>
+    <SEO
+  title="Skillset and Expertise Development"
+  description="Explore how skillset builds authority, trust, value creation, and market confidence in business."
+  keywords="skillset, expertise, authority, business skills, value creation"
+  canonical="https://yourdomain.com/skillset"
+/>
       <Navbar />
 
       <div className="bg-[#0A0F1C] text-white">

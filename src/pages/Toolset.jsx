@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -5,6 +6,12 @@ import { motion } from "framer-motion";
 export default function Toolset() {
   return (
     <>
+    <SEO
+  title="Toolset Systems AI and Business Infrastructure"
+  description="Discover how websites, automation, AI, CRM systems, and digital infrastructure help businesses grow with leverage."
+  keywords="toolset, AI automation, CRM, websites, digital infrastructure, business systems"
+  canonical="https://yourdomain.com/toolset"
+/>
       <Navbar />
 
       <div className="bg-[#0A0F1C] text-white">

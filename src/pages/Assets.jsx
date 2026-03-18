@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -19,6 +20,12 @@ const trustDocuments = [
 export default function Assets() {
   return (
     <>
+    <SEO
+  title="Assets Protection Legacy and Wealth Structure"
+  description="Understand how assets, protection planning, trusts, insurance, and legacy structures support long-term stability."
+  keywords="assets, legacy planning, wealth structure, trusts, insurance, protection"
+  canonical="https://yourdomain.com/assets"
+/>
       <Navbar />
 
       <div className="bg-[#0A0F1C] text-white">

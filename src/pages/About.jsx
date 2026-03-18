@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -5,6 +6,12 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <>
+    <SEO
+  title="About MSTA"
+  description="Learn about the MSTA framework and how it helps people build structure, create leverage, and protect what they are building."
+  keywords="about MSTA, business framework, mindset skillset toolset assets"
+  canonical="https://yourdomain.com/about"
+/>
       <Navbar />
 
       <div className="bg-[#0A0F1C] text-white">

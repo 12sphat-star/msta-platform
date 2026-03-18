@@ -1,3 +1,4 @@
+import SEO from "../components/SEO";
 import { useLocation, Link } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
@@ -37,6 +38,12 @@ export default function Book() {
 
   return (
     <>
+    <SEO
+  title="Schedule a Direct Consultation"
+  description="Schedule a direct consultation to discuss business structure, systems, visibility, growth strategy, and next steps."
+  keywords="business consultation, strategy call, direct consultation, growth strategy"
+  canonical="https://yourdomain.com/book"
+/>
       <Navbar />
 
       <div className="bg-[#05070C] text-white min-h-screen pt-28">
