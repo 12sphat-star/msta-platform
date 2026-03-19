@@ -142,7 +142,7 @@ export default function Toolset() {
 
             <div className="rounded-xl border border-gray-800 p-8">
               <ul className="space-y-3 text-gray-300">
-                <li>• AI voice answering inbound calls</li>
+                <li>• AI voice answering inbound and outboundcalls</li>
                 <li>• AI chat support and lead response</li>
                 <li>• Automated follow-up sequences</li>
                 <li>• Missed-call text back and re-engagement</li>
