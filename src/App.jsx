@@ -10,6 +10,7 @@ import Assets from "./pages/Assets";
 import Assessment from "./pages/Assessment";
 import Book from "./pages/Book";
 import About from "./pages/About";
+import ChatWidget from "./components/ChatWidget";
 
 export default function App() {
   const organizationSchema = {
@@ -55,6 +56,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
       </Routes>
 
+<ChatWidget />
       <Footer />
     </>
   );
