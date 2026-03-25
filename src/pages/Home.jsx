@@ -159,31 +159,37 @@ export default function Home() {
       </section>
 
       <section className="bg-[#0A0F1C] text-white px-6 md:px-16 py-16 border-t border-gray-900">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-[0.2em] text-indigo-400 mb-4">
-            Smart Website by 12 Stone
-          </p>
+  <div className="max-w-5xl mx-auto text-center">
+    <p className="text-sm uppercase tracking-[0.2em] text-indigo-400 mb-4">
+      Smart Website by 12 Stone
+    </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Explore the Smart Website Experience
-          </h2>
+    <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+      Explore the Smart Website Experience
+    </h2>
 
-          <p className="mt-6 text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
-            Learn how AI, automation, smart websites, CRM, and business
-            infrastructure fit into the Toolset side of MSTA.
-          </p>
+    <p className="mt-6 text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
+      Click below to see how a smart website can do more than just sit there.
+      You’ll learn how AI, automation, smart websites, CRM, and business
+      infrastructure fit into the Toolset side of MSTA.
+    </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link to="/toolset#voice-ai-demo" className="btn-primary">
-              Explore Smart Features
-            </Link>
+    <p className="mt-4 text-sm md:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto">
+      From there, you can talk to the AI assistant, ask questions, and explore
+      the next best step for business growth, structure, or protection.
+    </p>
 
-            <Link to="/assessment" className="btn-secondary">
-              Start the Assessment
-            </Link>
-          </div>
-        </div>
-      </section>
+    <div className="mt-8 flex flex-wrap justify-center gap-4">
+      <Link to="/toolset#voice-ai-demo" className="btn-primary">
+        Explore Smart Features
+      </Link>
+
+      <Link to="/assessment" className="btn-secondary">
+        Start the Assessment
+      </Link>
+    </div>
+  </div>
+</section>
 
       <CredibilityStrip />
       <MSTASection />

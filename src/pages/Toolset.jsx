@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Toolset() {
-    const faqSchema = {
+  const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
@@ -14,36 +14,38 @@ export default function Toolset() {
         name: "What does toolset mean in MSTA?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "In MSTA, toolset means the systems, software, automation, websites, AI tools, and infrastructure that help a business operate more efficiently and grow with leverage."
-        }
+          text: "In MSTA, toolset means the systems, software, automation, websites, AI tools, and infrastructure that help a business operate more efficiently and grow with leverage.",
+        },
       },
       {
         "@type": "Question",
         name: "Why is toolset important for business growth?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Toolset is important because growth becomes harder to sustain when everything depends on manual effort. The right systems improve speed, consistency, visibility, and follow-up."
-        }
+          text: "Toolset is important because growth becomes harder to sustain when everything depends on manual effort. The right systems improve speed, consistency, visibility, and follow-up.",
+        },
       },
       {
         "@type": "Question",
         name: "What is included in a strong business toolset?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A strong business toolset can include a smart website, CRM, calendar booking, automation, AI voice and chat, follow-up workflows, and access to capital strategies that support growth."
-        }
-      }
-    ]
+          text: "A strong business toolset can include a smart website, CRM, calendar booking, automation, AI voice and chat, follow-up workflows, and access to capital strategies that support growth.",
+        },
+      },
+    ],
   };
+
   return (
     <>
       <SEO
         title="Toolset Systems AI and Business Infrastructure"
         description="Discover how websites, automation, AI, CRM systems, and digital infrastructure help businesses grow with leverage."
         keywords="toolset, AI automation, CRM, websites, digital infrastructure, business systems"
-        canonical="https://yourdomain.com/toolset"
+        canonical="https://urmsta.com/toolset"
       />
-<Schema data={faqSchema} />
+
+      <Schema data={faqSchema} />
       <Navbar />
 
       <div className="bg-[#0A0F1C] text-white">
@@ -142,7 +144,7 @@ export default function Toolset() {
 
             <div className="rounded-xl border border-gray-800 p-8">
               <ul className="space-y-3 text-gray-300">
-                <li>• AI voice answering inbound and outboundcalls</li>
+                <li>• AI voice answering inbound and outbound calls</li>
                 <li>• AI chat support and lead response</li>
                 <li>• Automated follow-up sequences</li>
                 <li>• Missed-call text back and re-engagement</li>
@@ -242,86 +244,95 @@ export default function Toolset() {
             </div>
           </div>
         </section>
-<section
-  id="voice-ai-demo"
-  className="py-24 px-6 border-t border-gray-800 bg-[#0A0F1C]"
->
-  <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-    <div>
-      <p className="text-sm uppercase tracking-[0.2em] text-indigo-400 mb-4">
-        Smart Website by 12 Stone
-      </p>
 
-      <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-        Talk to the
-        <span className="text-indigo-400"> MSTA AI Assistant</span>
-      </h2>
-
-      <p className="mt-6 text-lg text-gray-400 leading-relaxed max-w-2xl">
-        Want a faster way to explore MSTA? Tap below to speak with our AI
-        assistant about smart websites, AI solutions, business structure,
-        protection, or your next best step.
-      </p>
-
-      <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
-        This is part of the Toolset side of MSTA — using smart systems,
-        automation, and AI to create leverage and improve the visitor
-        experience.
-      </p>
-
-      <div className="mt-10 flex flex-wrap gap-4">
-        <a href="tel:+17575308825" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-500 transition rounded-lg text-white">
-          Talk to the AI
-        </a>
-
-        <Link
-          to="/assessment"
-          className="inline-block px-8 py-4 border border-gray-700 hover:border-gray-500 transition rounded-lg text-white"
+        {/* VOICE AI DEMO */}
+        <section
+          id="voice-ai-demo"
+          className="py-24 px-6 border-t border-gray-800 bg-[#0A0F1C]"
         >
-          Start the Assessment
-        </Link>
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-indigo-400 mb-4">
+                Smart Website by 12 Stone
+              </p>
 
-        <Link
-          to="/book"
-          className="inline-block px-8 py-4 border border-gray-700 hover:border-gray-500 transition rounded-lg text-white"
-        >
-          Schedule a Consultation
-        </Link>
-      </div>
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                Talk to the
+                <span className="text-indigo-400"> MSTA AI Assistant</span>
+              </h2>
 
-      <p className="mt-4 text-sm text-gray-500">
-        On mobile, tap to call and speak with the AI assistant directly.
-      </p>
-    </div>
+              <p className="mt-6 text-lg text-gray-400 leading-relaxed max-w-2xl">
+                Click below to speak with our AI assistant and learn how MSTA
+                can help with smart websites, AI solutions, automation, business
+                structure, protection, and your next best step.
+              </p>
 
-    <div className="rounded-2xl border border-gray-800 bg-[#111827] p-8 shadow-2xl">
-      <div className="rounded-xl border border-gray-700 bg-[#0A0F1C] p-6">
-        <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
-          Smart Website Demo
-        </p>
+              <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
+                This is part of the Toolset side of MSTA — using smarter
+                systems, digital infrastructure, and AI to create leverage and
+                improve the way people engage with your business.
+              </p>
 
-        <h3 className="text-2xl font-semibold mb-4">
-          AI-Guided Visitor Experience
-        </h3>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="tel:+17575308825"
+                  className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-500 transition rounded-lg text-white"
+                >
+                  Talk to the AI
+                </a>
 
-        <div className="space-y-4 text-gray-400">
-          <p>• Speak directly with the AI assistant</p>
-          <p>• Learn what MSTA means</p>
-          <p>• Explore smart website and AI solutions</p>
-          <p>• Get pointed to the right next step</p>
-          <p>• See how AI can improve a modern website</p>
-        </div>
+                <Link
+                  to="/assessment"
+                  className="inline-block px-8 py-4 border border-gray-700 hover:border-gray-500 transition rounded-lg text-white"
+                >
+                  Start the Assessment
+                </Link>
 
-        <div className="mt-8 rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-5">
-          <p className="text-sm text-indigo-300 mb-2">Suggested first question</p>
-          <p className="text-white font-medium">
-            “How can MSTA help me in business or family life?”
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                <Link
+                  to="/book"
+                  className="inline-block px-8 py-4 border border-gray-700 hover:border-gray-500 transition rounded-lg text-white"
+                >
+                  Schedule a Consultation
+                </Link>
+              </div>
+
+              <p className="mt-4 text-sm text-gray-500">
+                On mobile, tap to call and speak with the AI assistant directly.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-gray-800 bg-[#111827] p-8 shadow-2xl">
+              <div className="rounded-xl border border-gray-700 bg-[#0A0F1C] p-6">
+                <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
+                  Smart Website Demo
+                </p>
+
+                <h3 className="text-2xl font-semibold mb-4">
+                  AI-Guided Visitor Experience
+                </h3>
+
+                <div className="space-y-4 text-gray-400">
+                  <p>• Speak directly with the AI assistant</p>
+                  <p>• Learn what MSTA means</p>
+                  <p>• Explore smart website and AI solutions</p>
+                  <p>• Get pointed to the right next step</p>
+                  <p>• See how AI can improve a modern website</p>
+                </div>
+
+                <div className="mt-8 rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-5">
+                  <p className="text-sm text-indigo-300 mb-2">
+                    Suggested first question
+                  </p>
+                  <p className="text-white font-medium">
+                    “How can MSTA help me build smarter systems or protect what
+                    I’m building?”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-24 px-6 border-t border-gray-800">
           <div className="max-w-5xl mx-auto">
