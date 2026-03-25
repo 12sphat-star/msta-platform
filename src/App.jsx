@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Schema from "./components/Schema";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import Mindset from "./pages/Mindset";
@@ -10,7 +11,6 @@ import Assets from "./pages/Assets";
 import Assessment from "./pages/Assessment";
 import Book from "./pages/Book";
 import About from "./pages/About";
-import ChatWidget from "./components/ChatWidget";
 
 export default function App() {
   const organizationSchema = {
@@ -44,6 +44,7 @@ export default function App() {
     <>
       <Schema data={organizationSchema} />
       <Schema data={websiteSchema} />
+      <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -56,7 +57,6 @@ export default function App() {
         <Route path="/about" element={<About />} />
       </Routes>
 
-<ChatWidget />
       <Footer />
     </>
   );

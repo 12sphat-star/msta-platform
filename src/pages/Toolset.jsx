@@ -242,7 +242,86 @@ export default function Toolset() {
             </div>
           </div>
         </section>
+<section
+  id="voice-ai-demo"
+  className="py-24 px-6 border-t border-gray-800 bg-[#0A0F1C]"
+>
+  <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <p className="text-sm uppercase tracking-[0.2em] text-indigo-400 mb-4">
+        Smart Website by 12 Stone
+      </p>
 
+      <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+        Talk to the
+        <span className="text-indigo-400"> MSTA AI Assistant</span>
+      </h2>
+
+      <p className="mt-6 text-lg text-gray-400 leading-relaxed max-w-2xl">
+        Want a faster way to explore MSTA? Tap below to speak with our AI
+        assistant about smart websites, AI solutions, business structure,
+        protection, or your next best step.
+      </p>
+
+      <p className="mt-6 text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
+        This is part of the Toolset side of MSTA — using smart systems,
+        automation, and AI to create leverage and improve the visitor
+        experience.
+      </p>
+
+      <div className="mt-10 flex flex-wrap gap-4">
+        <a href="tel:+17575308825" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-500 transition rounded-lg text-white">
+          Talk to the AI
+        </a>
+
+        <Link
+          to="/assessment"
+          className="inline-block px-8 py-4 border border-gray-700 hover:border-gray-500 transition rounded-lg text-white"
+        >
+          Start the Assessment
+        </Link>
+
+        <Link
+          to="/book"
+          className="inline-block px-8 py-4 border border-gray-700 hover:border-gray-500 transition rounded-lg text-white"
+        >
+          Schedule a Consultation
+        </Link>
+      </div>
+
+      <p className="mt-4 text-sm text-gray-500">
+        On mobile, tap to call and speak with the AI assistant directly.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-gray-800 bg-[#111827] p-8 shadow-2xl">
+      <div className="rounded-xl border border-gray-700 bg-[#0A0F1C] p-6">
+        <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
+          Smart Website Demo
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-4">
+          AI-Guided Visitor Experience
+        </h3>
+
+        <div className="space-y-4 text-gray-400">
+          <p>• Speak directly with the AI assistant</p>
+          <p>• Learn what MSTA means</p>
+          <p>• Explore smart website and AI solutions</p>
+          <p>• Get pointed to the right next step</p>
+          <p>• See how AI can improve a modern website</p>
+        </div>
+
+        <div className="mt-8 rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-5">
+          <p className="text-sm text-indigo-300 mb-2">Suggested first question</p>
+          <p className="text-white font-medium">
+            “How can MSTA help me in business or family life?”
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         {/* FAQ */}
         <section className="py-24 px-6 border-t border-gray-800">
           <div className="max-w-5xl mx-auto">
